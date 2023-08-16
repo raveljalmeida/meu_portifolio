@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@font-face {
+    font-family: roboto;
+    src: url(../font/Roboto-Light.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+.cabecalho {
+    height: 122px;
+    width: 100%;
+    /*background-color: blue;*/
+}
+
+.cabecalho img {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin-left: 116px;
+}
+
+.menu {
+    margin-right: 138px;
+    height: 30%;
+    /*width: 670px;*/
+    /*background-color: red;*/
+    text-align: justify;
+    float: right;
+    position: relative;
+    top: 64%;
+    transform: translate(0, -50%);
+    border-top: 1px solid rgba(128, 128, 128, 0.8);
+}
+
+.menu a {
+    font-size: 14px;
+    font-family: roboto; 
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    text-decoration: none;
+    color: black;
+}
+
+.menu .itemMenu {
+    margin-right: 26px;
+}
+

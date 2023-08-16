@@ -1,0 +1,544 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: roboto;
+    src: url(../font/Roboto-Light.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: roboto;
+    src: url(../font/Roboto-Bold.ttf);
+    font-weight: 700;
+    font-style: normal;
+}
+
+/********************INICIO-CABEÇALHO********************/
+
+.cabecalho {
+    height: 122px;
+    width: 100%;
+}
+
+.cabecalho img {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin-left: 116px;
+}
+
+.menu {
+    margin-right: 138px;
+    height: 30%;
+    text-align: justify;
+    float: right;
+    position: relative;
+    top: 64%;
+    transform: translate(0, -50%);
+    border-top: 1px solid rgba(128, 128, 128, 0.8);
+}
+
+.menu a {
+    font-size: 14px;
+    font-family: roboto; 
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    text-decoration: none;
+    color: black;
+}
+
+.menu .itemMenu {
+    margin-right: 26px;
+}
+
+.menu-hamburger {
+    display: none; /* Inicialmente oculto em telas maiores */
+}
+  
+.menu-hamburger-icon {
+    position: absolute;
+    top: 6%;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 9999;
+    display: none;
+}
+
+/* Estilo para o conteúdo do menu hambúrguer */
+.menu-hamburger-content {
+    position: fixed;
+    top: 0;
+    right: -50%; /* Inicialmente fora da tela */
+    width: 100%; /* Largura definida como 50% da tela */
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 9998;
+    transition: right 2s ease;
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid rgba(128, 128, 128, 0.8);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.8);
+    margin-bottom: 20px;
+    padding: 15px 0 5px 0;
+    transition: top 0.3s ease; /* Adicione uma transição suave */
+}
+  
+  
+  /* Estilo para as opções do menu hambúrguer */
+  .menu-hamburger-content a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+
+/********************FIM-CABEÇALHO********************/
+
+/********************INICIO SLIDES IMAGENS********************/
+
+.slider {
+    margin: 0 auto;
+    width: 1350px;
+    height: 655px;
+    overflow: hidden;
+}
+
+.slides {
+    width: 400%;
+    height: 655px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 25%;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    filter: blur(1px);
+    transform: scale(1);
+    transition: transform 5s;
+}
+
+.slide.active img {
+    transform: scale(1.2);
+}
+
+.manual-navigation {
+    position: absolute;
+    width: 1350px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid #FFFF;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 5px;
+}
+
+.manual-btn:hover {
+    background-color: white;
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -50%;
+}
+
+#radio4:checked ~ .first {
+    margin-left: -75%;
+}
+
+.selector div {
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.selector {
+    position: absolute;
+    width: 1350px;
+    margin-top: 615px;
+    display: flex;
+    justify-content: center;
+}
+
+.selector div:not(:last-child){
+    margin-right: 5px;
+}
+
+#radio1:checked ~ .selector .btn1 {
+    background-color: white;
+}
+
+#radio2:checked ~ .selector .btn2 {
+    background-color: white;
+}
+
+#radio3:checked ~ .selector .btn3 {
+    background-color: white;
+}
+
+#radio4:checked ~ .selector .btn4 {
+    background-color: white;
+}
+
+/********************FIM SLIDES IMAGENS********************/
+
+
+/********************INICIO SLIDES TEXTO********************/
+
+.slide-text {
+    width: 700px;
+    height: 298px;
+    position: absolute;
+    top: 80px;
+    left: 150px;
+    text-align: center;
+    color: #ffffff;
+    font-family: roboto;
+    display: flex;
+    animation: slide-animation 1.3s linear backwards;
+}
+
+.slide-text .diagonal-title {
+    width: 600px;
+    height: 150px;
+    -webkit-transform: skew(-40deg); /* Chrome, Opera */
+    -ms-transform: skew(-40deg); /* IE */
+    transform: skew(-40deg); /* Padrão */
+    border-right: solid 3px #ffffff;
+}
+
+.slide-text .title {
+    transform: skew(40deg);
+    margin-right: 17px;
+}
+
+.slide-text .title p {
+    font-size: 50px;
+}
+
+.slide-text .diagonal-text {
+    width: 600px;
+    height: 180px;
+    -webkit-transform: skew(-40deg); /* Chrome, Opera */
+    -ms-transform: skew(-40deg); /* IE */
+    transform: skew(-40deg); /* Padrão */
+    margin-left: 15px;
+}
+
+.slide-text .txt{
+    transform: skew(40deg);
+    margin-left: 20px;
+    text-align: left;
+    position: relative;
+    top: 96px;
+}
+
+@keyframes slide-animation {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+}
+  
+/********************FIM SLIDES TEXTO********************/
+
+
+/********************INICIO INFORMAÇÕES********************/
+
+.information-title {
+    font-family: roboto;
+    margin: 60px 132px;
+    color: #709970;
+}
+
+.container {
+    margin: 60px auto;
+    height: 240px;
+    width: 80%;
+    background-color: rgb(238,238,238);
+}
+
+.container .box {
+    height: 84%;
+    width: 24.5%;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    border-right: solid 1px #216d56;
+    display: inline-block;
+    vertical-align: top;
+    font-weight: none;
+}
+
+.container .box:last-child {
+    border: none;
+}
+
+.box h1 {
+    font-family: roboto;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    color: #216d56;
+}
+
+.box p {
+    font-family: roboto;
+    font-size: 16px;
+    font-weight: none;
+    text-align: justify;
+    width: 200px;
+    margin: 20px auto;
+}
+
+.services-title {
+    font-family: roboto;
+    margin: 60px 70px;
+    color: #709970;
+    font-size: 30px;
+}
+
+.services {
+    width: 90%;
+    height: 600px;
+    margin: 50px auto;
+}
+
+.service-inform {
+    height: 100%;
+    width: 32%;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    background-color: rgb(238,238,238);
+    border-right: solid 10px white; 
+}
+
+.service-img {
+    height: 150px;
+    width: 125px;
+    margin: 30px auto;
+}
+
+#img-1 {
+    margin-top: 50px;
+    height: 105px;
+    width: 105px;
+    background-image: url(../img/motor.png);
+    background-size: contain;
+    background-position: center;
+}
+
+#img-2 {
+    margin-top: 50px;
+    height: 105px;
+    width: 105px;
+    background-image: url(../img/economize-agua.png);
+    background-size: contain;
+    background-position: center;
+}
+
+#img-3 {
+    margin-top: 50px;
+    height: 105px;
+    width: 105px;
+    background-image: url(../img/tomada-eletrica.png);
+    background-size: contain;
+    background-position: center;
+}
+
+.service-inform h1{
+    font-family: roboto;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    color: #216d56;
+}
+
+.service-inform p{
+    font-family: roboto;
+    font-size: 16px;
+    font-weight: none;
+    text-align: justify;
+    width: 200px;
+    margin: 20px auto;
+}
+
+/***********FIM INFORMÇÕES***********/
+
+
+/***********INICIO RODAPÉ***********/
+
+.rodape {
+    height: 200px;
+    width: 100%;
+    background-color: #709970;
+    position: relative;
+    top: 100%;
+    margin-top: 150px;
+}
+
+
+
+/***********FIM RODAPÉ***********/
+
+/* Media query para ajustar o layout em telas menores */
+@media screen and (max-width: 768px) {
+  .cabecalho img {
+    margin-left: 20px;
+    max-width: 150px;
+  }
+
+  .menu {
+    margin-right: 20px;
+    display: none;
+  }
+
+  .menu a {
+    font-size: 12px;
+  }
+
+.menu-hamburger {
+    display: block; /* Mostrar menu hambúrguer em telas menores */
+}
+
+.menu-hamburger-icon {
+    display: block;
+}
+
+.menu-hamburger-content {
+    position: static;
+    display: block;
+    text-align: left;
+}
+
+  .slider {
+    width: 100%;
+    height: 400px;
+  }
+
+  .slide-text {
+    width: 100%;
+    height: 200px;
+    top: 40px;
+    left: 0;
+    display: block;
+    text-align: center;
+  }
+
+  .slide-text .diagonal-title,
+  .slide-text .diagonal-text {
+    width: 100%;
+    margin: 0;
+    border: none;
+  }
+
+  .slide-text .diagonal-title {
+    margin-left: -20vw;
+  }
+
+  .slide-text .diagonal-text {
+    margin-left: 3vw;
+    margin-top: -150px;
+    width: 300px;
+  }
+
+  .slide-text .title p {
+    font-size: 30px;
+  }
+
+  .slide-text .txt {
+    top: 40px;
+  }
+
+  .information-title {
+    margin: -50px auto;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza horizontalmente as divs .box */
+    align-items: flex-start; /* Alinha as divs .box no topo */
+    height: auto; /* Remova a altura fixa para que ela se ajuste ao conteúdo */
+  }
+
+  .container .box {
+    max-width: 400px; /* Defina uma largura máxima para evitar que fiquem muito largas */
+    margin-top: 20px; /* Adicione margem entre as divs .box */
+    border-bottom: 1px solid #216d56; /* Adicione a borda inferior */
+    padding-bottom: 20px; /* Adicione um espaço entre a borda inferior e o conteúdo */
+    width: 100%; /* Certifique-se de que ocupem a largura total disponível */
+    border-right: none;
+    transform: none;
+  }
+
+  .services {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .service-inform {
+    max-width: 400px;
+    margin: 20px auto;
+    width: 100%;
+  }
+
+  /* Adicionar margem ao título de service */
+  .services-title {
+    margin: 20px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .rodape {
+    margin-top: 360%;
+  }
+}  
