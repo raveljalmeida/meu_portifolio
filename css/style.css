@@ -420,6 +420,107 @@ body {
     position: relative;
     top: 100%;
     margin-top: 150px;
+    padding-top: 30px;
+}
+
+.rodape .redes-soc {
+    height: 50px;
+    width: 220px;
+    /*background-color: red;*/
+    margin: 0 auto;
+}
+
+.rodape .rede-logo {
+    height: 100%;
+    width: 32%;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    /*background-color: blue;*/
+}
+
+#facebook-icon {
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/facebook-icon.png);
+    background-size: contain;
+    background-position: center;
+}
+
+#linkedin-icon {
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/linkedin-icon.png);
+    background-size: contain;
+    background-position: center;
+}
+
+#instagram-icon {
+    width: 48px;
+    height: 48px;
+    background-image: url(../img/instagram-icon.png);
+    background-size: contain;
+    background-position: center;
+}
+
+.location {
+    width: 40%;
+    margin: 20px auto;
+}
+
+.location p {
+    text-align: center;
+    font-size: 16px;
+    font-family: roboto;
+}
+
+.contact {
+    height: 30px;
+    width: 40%;
+    /*background-color: red;*/
+    margin: 0 auto;
+}
+
+.phone {
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+}
+
+.phone img {
+    width: 30px;
+    height: 100%;
+}
+
+.phone p {
+    display: inline-block;
+    font-size: 22px;
+    font-family: roboto;
+    margin-left: 10px;
+    position: relative;
+    top: -7px;
+    font-weight: bold;
+}
+
+.email {
+    width: 49%;
+    height: 100%;
+    display: inline-block;
+}
+
+.email img {
+    width: 30px;
+    height: 100%;
+}
+
+.email p {
+    display: inline-block;
+    font-size: 20px;
+    font-family: roboto;
+    margin-left: 10px;
+    position: relative;
+    top: -8px;
+    font-weight: bold;
 }
 
 
@@ -540,5 +641,23 @@ body {
 
   .rodape {
     margin-top: 360%;
+    height: 250px;
   }
+
+  .location {
+    width: 63%;
+  }
+
+  .contact {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .phone, .email {
+    display: block;
+    width: 100%;
+    margin: 15px 15px;
+  }
+
+
 }  
