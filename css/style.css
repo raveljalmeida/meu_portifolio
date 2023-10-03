@@ -414,13 +414,13 @@ body {
 /***********INICIO RODAPÉ***********/
 
 .rodape {
-    height: 200px;
+    height: auto;
     width: 100%;
     background-color: #709970;
-    position: relative;
     top: 100%;
     margin-top: 150px;
     padding-top: 30px;
+    padding-bottom: 15px;
 }
 
 .rodape .redes-soc {
@@ -475,16 +475,15 @@ body {
 }
 
 .contact {
-    height: 30px;
-    width: 40%;
-    /*background-color: red;*/
-    margin: 0 auto;
+    width: auto;
+    height: auto;
+    text-align: center;
 }
 
 .phone {
-    width: 50%;
-    height: 100%;
+    width: auto;
     display: inline-block;
+    margin-right: 20px;
 }
 
 .phone img {
@@ -503,8 +502,7 @@ body {
 }
 
 .email {
-    width: 49%;
-    height: 100%;
+    width: auto;
     display: inline-block;
 }
 
@@ -527,8 +525,17 @@ body {
 
 /***********FIM RODAPÉ***********/
 
-/* Media query para ajustar o layout em telas menores */
+
 @media screen and (max-width: 768px) {
+  *:not(.slides){
+    max-width: 100%;
+  }
+
+  .manual-btn {
+    background-color: rgb(238,238,238);
+    border: 2px solid rgb(238,238,238);
+  }
+
   .cabecalho img {
     margin-left: 20px;
     max-width: 150px;
@@ -632,7 +639,7 @@ body {
     width: 100%;
   }
 
-  /* Adicionar margem ao título de service */
+
   .services-title {
     margin: 20px 0;
     width: 100%;
@@ -640,7 +647,7 @@ body {
   }
 
   .rodape {
-    margin-top: 360%;
+    margin-top: 430%;
     height: 250px;
   }
 
@@ -659,5 +666,8 @@ body {
     margin: 15px 15px;
   }
 
+  .email p {
+    font-size: 15px;
+  }
 
 }  
