@@ -7,6 +7,10 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 @font-face {
     font-family: roboto;
     src: url(../font/Roboto-Light.ttf);
@@ -14,10 +18,18 @@ html {
     font-style: normal;
 }
 
+@font-face {
+    font-family: roboto;
+    src: url(../font/Roboto-Bold.ttf);
+    font-weight: 700;
+    font-style: normal;
+}
+
+/********************INICIO-CABEÇALHO********************/
+
 .cabecalho {
     height: 122px;
     width: 100%;
-    /*background-color: blue;*/
 }
 
 .cabecalho img {
@@ -30,8 +42,6 @@ html {
 .menu {
     margin-right: 138px;
     height: 30%;
-    /*width: 670px;*/
-    /*background-color: red;*/
     text-align: justify;
     float: right;
     position: relative;
@@ -54,3 +64,86 @@ html {
     margin-right: 26px;
 }
 
+.menu-hamburger {
+    display: none; /* Inicialmente oculto em telas maiores */
+}
+  
+.menu-hamburger-icon {
+    position: absolute;
+    top: 6%;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 9999;
+    display: none;
+}
+
+/* Estilo para o conteúdo do menu hambúrguer */
+.menu-hamburger-content {
+    position: fixed;
+    top: 0;
+    right: -50%; /* Inicialmente fora da tela */
+    width: 100%; /* Largura definida como 50% da tela */
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 9998;
+    transition: right 2s ease;
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid rgba(128, 128, 128, 0.8);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.8);
+    margin-bottom: 20px;
+    padding: 15px 0 5px 0;
+    transition: top 0.3s ease;
+}
+  
+ 
+.menu-hamburger-content a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/********************FIM-CABEÇALHO********************/
+
+  @media screen and (max-width: 768px) {
+    *:not(.slides){
+      max-width: 100%;
+    }
+  
+    .manual-btn {
+      background-color: rgb(238,238,238);
+      border: 2px solid rgb(238,238,238);
+    }
+  
+    .cabecalho img {
+      margin-left: 20px;
+      max-width: 150px;
+    }
+  
+    .menu {
+      margin-right: 20px;
+      display: none;
+    }
+  
+    .menu a {
+      font-size: 12px;
+    }
+  
+  .menu-hamburger {
+      display: block; /* Mostrar menu hambúrguer em telas menores */
+  }
+  
+  .menu-hamburger-icon {
+      display: block;
+  }
+  
+  .menu-hamburger-content {
+      position: static;
+      display: block;
+      text-align: left;
+  }
+}
