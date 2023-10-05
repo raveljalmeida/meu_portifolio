@@ -109,6 +109,20 @@ body {
 
 /********************FIM-CABEÇALHO********************/
 
+
+/********************INICIO QUEM SOMOS******************/
+
+.img-about {
+    height: 200px;
+    width: 100%;
+    background-image: url(../img/slide4.jpg);
+    background-size: cover;
+    background-position: 0 320px;
+    margin: 20px auto;
+}
+
+/********************FIM QUEM SOMOS******************/
+
   @media screen and (max-width: 768px) {
     *:not(.slides){
       max-width: 100%;
