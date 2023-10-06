@@ -109,6 +109,147 @@ body {
 
 /********************FIM-CABEÇALHO********************/
 
+
+/********************INICIO QUEM SOMOS******************/
+
+.img-about {
+    height: 200px;
+    width: 100%;
+    background-image: url(../img/slide4.jpg);
+    background-size: cover;
+    background-position: 0 320px;
+    margin: 20px auto;
+}
+
+.title {
+    color:#709970;
+    font-family: roboto;
+    font-size: 60px;
+    margin-left: 105px;
+    margin-top: 35px;
+    margin-bottom: 50px;
+}
+
+.text {
+    text-align: justify;
+    width: 85%;
+    margin: 10px auto;
+    font-family: roboto;
+}
+
+/********************FIM QUEM SOMOS******************/
+
+
+/***********INICIO RODAPÉ***********/
+
+.rodape {
+    height: auto;
+    width: 100%;
+    background-color: #709970;
+    top: 100%;
+    margin-top: 150px;
+    padding-top: 30px;
+    padding-bottom: 15px;
+}
+
+.rodape .redes-soc {
+    height: 50px;
+    width: 220px;
+    /*background-color: red;*/
+    margin: 0 auto;
+}
+
+.rodape .rede-logo {
+    height: 100%;
+    width: 32%;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    /*background-color: blue;*/
+}
+
+#facebook-icon {
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/facebook-icon.png);
+    background-size: contain;
+    background-position: center;
+}
+
+#linkedin-icon {
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/linkedin-icon.png);
+    background-size: contain;
+    background-position: center;
+}
+
+#instagram-icon {
+    width: 48px;
+    height: 48px;
+    background-image: url(../img/instagram-icon.png);
+    background-size: contain;
+    background-position: center;
+}
+
+.location {
+    width: 40%;
+    margin: 20px auto;
+}
+
+.location p {
+    text-align: center;
+    font-size: 16px;
+    font-family: roboto;
+}
+
+.contact {
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+
+.phone {
+    width: auto;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.phone img {
+    width: 30px;
+    height: 100%;
+}
+
+.phone p {
+    font-family: roboto;
+    font-size: 22px;
+    display: inline-block;
+    margin-left: 10px;
+    position: relative;
+    top: -7px;
+}
+
+.email {
+    width: auto;
+    display: inline-block;
+}
+
+.email img {
+    width: 30px;
+    height: 100%;
+}
+
+.email p {
+    display: inline-block;
+    font-size: 20px;
+    font-family: roboto;
+    margin-left: 10px;
+    position: relative;
+    top: -8px;
+}
+
+/***********FIM RODAPÉ***********/
+
   @media screen and (max-width: 768px) {
     *:not(.slides){
       max-width: 100%;
@@ -145,5 +286,40 @@ body {
       position: static;
       display: block;
       text-align: left;
+  }
+
+  .img-about {
+    height: 4em;
+  }
+
+  .title {
+    font-size: 36px;
+    margin-left: 8%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .rodape {
+    margin-top: 10%;
+    height: 250px;
+  }
+
+  .location {
+    width: 63%;
+  }
+
+  .contact {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .phone, .email {
+    display: block;
+    width: 100%;
+    margin: 15px 15px;
+  }
+
+  .email p {
+    font-size: 15px;
   }
 }
