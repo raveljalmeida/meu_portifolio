@@ -227,6 +227,7 @@ body {
     margin-left: 10px;
     position: relative;
     top: -7px;
+    font-weight: bold;
 }
 
 .email {
@@ -246,6 +247,7 @@ body {
     margin-left: 10px;
     position: relative;
     top: -8px;
+    font-weight: bold;
 }
 
 /***********FIM RODAPÉ***********/
@@ -289,7 +291,8 @@ body {
   }
 
   .img-about {
-    height: 4em;
+    height: 7em;
+    background-position: 0 400px;
   }
 
   .title {
