@@ -1,0 +1,404 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: roboto;
+    src: url(../font/Roboto-Light.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: roboto;
+    src: url(../font/Roboto-Bold.ttf);
+    font-weight: 700;
+    font-style: normal;
+}
+
+/********************INICIO-CABEÇALHO********************/
+
+.cabecalho {
+    height: 122px;
+    width: 100%;
+}
+
+.cabecalho img {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin-left: 116px;
+}
+
+.menu {
+    margin-right: 138px;
+    height: 30%;
+    text-align: justify;
+    float: right;
+    position: relative;
+    top: 64%;
+    transform: translate(0, -50%);
+    border-top: 1px solid rgba(128, 128, 128, 0.8);
+}
+
+.menu a {
+    font-size: 14px;
+    font-family: roboto; 
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+    text-decoration: none;
+    color: black;
+}
+
+.menu .itemMenu {
+    margin-right: 26px;
+}
+
+.menu-hamburger {
+    display: none; /* Inicialmente oculto em telas maiores */
+}
+  
+.menu-hamburger-icon {
+    position: absolute;
+    top: 6%;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 9999;
+    display: none;
+}
+
+/* Estilo para o conteúdo do menu hambúrguer */
+.menu-hamburger-content {
+    position: fixed;
+    top: 0;
+    right: -50%; /* Inicialmente fora da tela */
+    width: 100%; /* Largura definida como 50% da tela */
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 9998;
+    transition: right 2s ease;
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid rgba(128, 128, 128, 0.8);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.8);
+    margin-bottom: 20px;
+    padding: 15px 0 5px 0;
+    transition: top 0.3s ease;
+}
+  
+ 
+.menu-hamburger-content a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/********************FIM-CABEÇALHO********************/
+
+
+/********************INICIO NOSSA EQUIPE******************/
+
+.title {
+    color:#709970;
+    font-family: roboto;
+    font-size: 60px;
+    margin-left: 105px;
+    margin-top: 35px;
+    margin-bottom: 50px;
+}
+
+.container {
+    width: 90%;
+    height: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.box {
+    height: 100%;
+    width: 46%;
+    background-color: rgb(238,238,238);
+    border: solid 4px #216d56;
+}
+
+.box:not(.box:last-child){
+    display: inline-block;
+}
+
+.box:first-child {
+    margin-right: 30px;
+}
+
+.box:last-child {
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.img {
+    width: 30%;
+    height: 23%;
+    margin: 25px auto;
+    border-radius: 50%;
+    border: solid 4px #216d56;
+    background-image: url(../img/perfil.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.name {
+    font-size: 30px;
+    font-family: roboto;
+    color: #709970;
+    font-weight: bold;
+}
+
+.text {
+    font-family: roboto;
+    text-align: justify;
+    width: 90%;
+    margin: 20px auto;
+}
+
+/********************FIM NOSSA EQUIPE******************/
+
+
+/***********INICIO RODAPÉ***********/
+
+.rodape {
+    height: auto;
+    width: 100%;
+    background-color: #709970;
+    top: 270%;
+    margin-top: 150px;
+    position: absolute;
+    padding-top: 30px;
+    padding-bottom: 15px;
+}
+
+.rodape .redes-soc {
+    height: 50px;
+    width: 220px;
+    /*background-color: red;*/
+    margin: 0 auto;
+}
+
+.rodape .rede-logo {
+    height: 100%;
+    width: 32%;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    /*background-color: blue;*/
+}
+
+#facebook-icon {
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/facebook-icon.png);
+    background-size: contain;
+    background-position: center;
+}
+
+#linkedin-icon {
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/linkedin-icon.png);
+    background-size: contain;
+    background-position: center;
+}
+
+#instagram-icon {
+    width: 48px;
+    height: 48px;
+    background-image: url(../img/instagram-icon.png);
+    background-size: contain;
+    background-position: center;
+}
+
+.location {
+    width: 40%;
+    margin: 20px auto;
+}
+
+.location p {
+    text-align: center;
+    font-size: 16px;
+    font-family: roboto;
+}
+
+.contact {
+    width: auto;
+    height: auto;
+    text-align: center;
+}
+
+.phone {
+    width: auto;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.phone img {
+    width: 30px;
+    height: 100%;
+}
+
+.phone p {
+    font-family: roboto;
+    font-size: 22px;
+    display: inline-block;
+    margin-left: 10px;
+    position: relative;
+    top: -7px;
+    font-weight: bold;
+}
+
+.email {
+    width: auto;
+    display: inline-block;
+}
+
+.email img {
+    width: 30px;
+    height: 100%;
+}
+
+.email p {
+    display: inline-block;
+    font-size: 20px;
+    font-family: roboto;
+    margin-left: 10px;
+    position: relative;
+    top: -8px;
+    font-weight: bold;
+}
+
+/***********FIM RODAPÉ***********/
+
+  @media screen and (max-width: 768px) {
+    *:not(.slides){
+      max-width: 100%;
+    }
+  
+    .manual-btn {
+      background-color: rgb(238,238,238);
+      border: 2px solid rgb(238,238,238);
+    }
+  
+    .cabecalho img {
+      margin-left: 20px;
+      max-width: 150px;
+    }
+  
+    .menu {
+      margin-right: 20px;
+      display: none;
+    }
+  
+    .menu a {
+      font-size: 12px;
+    }
+  
+  .menu-hamburger {
+      display: block; /* Mostrar menu hambúrguer em telas menores */
+  }
+  
+  .menu-hamburger-icon {
+      display: block;
+  }
+  
+  .menu-hamburger-content {
+      position: static;
+      display: block;
+      text-align: left;
+  }
+
+  .title {
+    font-size: 36px;
+    margin-left: 8%;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  .box:not(.box:last-child) {
+    margin-right: auto;
+    margin-bottom: 50px;
+  }
+
+  .box:last-child {
+    margin-top: 0;
+  }
+
+  .box {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .img {
+    width: 30%;
+    height: 15%;
+  }
+
+  .name {
+    font-size: 25px;
+  }
+
+  .text {
+    font-size: 13px;
+    margin-top: 12px;
+  }
+
+  .rodape {
+    margin-top: 50%;
+    display: block;
+    height: 250px;
+  }
+
+  .location {
+    width: 63%;
+  }
+
+  .contact {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .phone, .email {
+    display: block;
+    width: 100%;
+    margin: 15px 15px;
+  }
+
+  .email p {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+    .rodape {
+        margin-top: 200%;
+    }
+
+    @media screen and (min-height: 800px) {
+        .rodape {
+            margin-top: 100%;
+        }
+    }
+}
