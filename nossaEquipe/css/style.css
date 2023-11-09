@@ -118,60 +118,57 @@ body {
     font-size: 60px;
     margin-left: 105px;
     margin-top: 35px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
-.container {
-    width: 90%;
-    height: 700px;
-    margin: 0 auto;
+.employee-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.employee-box {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-}
-
-.box {
-    height: 100%;
-    width: 46%;
     background-color: rgb(238,238,238);
     border: solid 4px #216d56;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
-.box:not(.box:last-child){
-    display: inline-block;
-}
-
-.box:first-child {
-    margin-right: 30px;
-}
-
-.box:last-child {
-    margin: 0 auto;
-    margin-top: 60px;
-}
-
-.img {
-    width: 30%;
-    height: 23%;
-    margin: 25px auto;
+.employee-img {
+    width: 32%;
+    height: 32%;
     border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 10px;
     border: solid 4px #216d56;
-    background-image: url(../img/perfil.png);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
-.name {
+.employee-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.employee-box h3 {
     font-size: 30px;
     font-family: roboto;
     color: #709970;
     font-weight: bold;
 }
 
-.text {
+.employee-box p {
     font-family: roboto;
     text-align: justify;
     width: 90%;
-    margin: 20px auto;
+    margin: 15px auto;
 }
 
 /********************FIM NOSSA EQUIPE******************/
@@ -183,11 +180,10 @@ body {
     height: auto;
     width: 100%;
     background-color: #709970;
-    top: 270%;
-    margin-top: 150px;
-    position: absolute;
+    position: bottom;
     padding-top: 30px;
     padding-bottom: 15px;
+    margin-top: 90px;
 }
 
 .rodape .redes-soc {
@@ -203,7 +199,6 @@ body {
     display: inline-block;
     vertical-align: top;
     position: relative;
-    /*background-color: blue;*/
 }
 
 #facebook-icon {
@@ -290,115 +285,99 @@ body {
 
 /***********FIM RODAPÉ***********/
 
-  @media screen and (max-width: 768px) {
+
+@media (max-width: 600px) {
+    .employee-box {
+        width: 80%;
+    }
+
+    .employee-center {
+        margin-top: 20px;
+    }
+
     *:not(.slides){
-      max-width: 100%;
+        max-width: 100%;
+      }
+    
+      .manual-btn {
+        background-color: rgb(238,238,238);
+        border: 2px solid rgb(238,238,238);
+      }
+    
+      .cabecalho img {
+        margin-left: 20px;
+        max-width: 150px;
+      }
+    
+      .menu {
+        margin-right: 20px;
+        display: none;
+      }
+    
+      .menu a {
+        font-size: 12px;
+      }
+    
+    .menu-hamburger {
+        display: block; /* Mostrar menu hambúrguer em telas menores */
+    }
+    
+    .menu-hamburger-icon {
+        display: block;
+    }
+    
+    .menu-hamburger-content {
+        position: static;
+        display: block;
+        text-align: left;
     }
   
-    .manual-btn {
-      background-color: rgb(238,238,238);
-      border: 2px solid rgb(238,238,238);
+    .title {
+      font-size: 36px;
+      margin-left: 8%;
+      margin-top: 20px;
+      margin-bottom: 40px;
     }
   
-    .cabecalho img {
-      margin-left: 20px;
-      max-width: 150px;
+    .img {
+      width: 30%;
+      height: 15%;
     }
   
-    .menu {
-      margin-right: 20px;
-      display: none;
+    .name {
+      font-size: 25px;
     }
   
-    .menu a {
-      font-size: 12px;
+    .text {
+      font-size: 13px;
+      margin-top: 12px;
     }
   
-  .menu-hamburger {
-      display: block; /* Mostrar menu hambúrguer em telas menores */
-  }
-  
-  .menu-hamburger-icon {
+    .rodape {
       display: block;
-  }
+      height: 250px;
+    }
   
-  .menu-hamburger-content {
-      position: static;
+    .location {
+      width: 63%;
+    }
+  
+    .contact {
+      width: 70%;
+      margin: 0 auto;
+    }
+  
+    .phone, .email {
       display: block;
-      text-align: left;
-  }
-
-  .title {
-    font-size: 36px;
-    margin-left: 8%;
-    margin-top: 20px;
-    margin-bottom: 40px;
-  }
-
-  .box:not(.box:last-child) {
-    margin-right: auto;
-    margin-bottom: 50px;
-  }
-
-  .box:last-child {
-    margin-top: 0;
-  }
-
-  .box {
-    display: block;
-    margin: 0 auto;
-    width: 80%;
-    margin-bottom: 20px;
-  }
-
-  .img {
-    width: 30%;
-    height: 15%;
-  }
-
-  .name {
-    font-size: 25px;
-  }
-
-  .text {
-    font-size: 13px;
-    margin-top: 12px;
-  }
-
-  .rodape {
-    margin-top: 50%;
-    display: block;
-    height: 250px;
-  }
-
-  .location {
-    width: 63%;
-  }
-
-  .contact {
-    width: 70%;
-    margin: 0 auto;
-  }
-
-  .phone, .email {
-    display: block;
-    width: 100%;
-    margin: 15px 15px;
-  }
-
-  .email p {
-    font-size: 15px;
-  }
+      width: 100%;
+      margin: 15px 15px;
+    }
+  
+    .email p {
+      font-size: 15px;
+    }
 }
 
-@media screen and (max-width: 400px) {
-    .rodape {
-        margin-top: 200%;
-    }
-
-    @media screen and (min-height: 800px) {
-        .rodape {
-            margin-top: 100%;
-        }
-    }
+.employee-center {
+    margin: 20px auto;
 }
