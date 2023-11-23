@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <title>Entre em contato - S.O.ESCO Ensaios</title>
+        <link rel="icon" type="imagem/png" href="img/logo.png" />
+        <link rel="stylesheet" href="./css/style.css" />
+    </head>
+    <body>
+        <header><!--inicio-header-->
+
+            <!--**********INICIO CABEÇALHO**********-->
+
+            <div class="cabecalho">
+                <a href="../index.html"><img src="img/logoSOESCO.png"alt="Logo S.O.ESCO"></a>
+                <div class="menu">
+                    <a class="itemMenu" href="../index.html">HOME</a>
+                    <a class="itemMenu" href="../quemSomos/quemsomos.html">QUEM SOMOS</a>
+                    <a class="itemMenu" href="https://soesconews.webnode.page/" target="_blank">BLOG SOESCO</a>
+                    <a class="itemMenu" href="../index.html#services">SERVIÇOS</a>
+                    <a class="itemMenu" href="./nossaEquipe.html">NOSSA EQUIPE</a>
+                    <a href="./contato.html" id="contato">CONTATO</a>
+                </div><!--menu-->
+            </div><!--cabecalho-->
+
+            <!-- Inicio Menu Hamburguer -->
+            <div class="menu-hamburger"><!-- Menu Hambúrguer -->
+            <div class="menu-hamburger-icon" id="menu-icon">
+                &#9776;
+            </div>
+            <div class="menu-hamburger-content" id="menu-content">
+                <a class="itemMenu" href="../index.html">HOME</a>
+                <a class="itemMenu" href="../quemSomos/quemsomos.html">QUEM SOMOS</a>
+                <a class="itemMenu" href="https://soesconews.webnode.page/" target="_blank">BLOG SOESCO</a>
+                <a class="itemMenu" href="../index.html#services">SERVIÇOS</a>
+                <a class="itemMenu" href="./nossaEquipe.html">NOSSA EQUIPE</a>
+                <a href="./contato.html" id="contato">CONTATO</a>
+            </div><!--menu-hamburguer-content-->
+            </div><!--Menu Hambúrguer-->
+            <!-- Fim Menu Hambúrguer -->
+
+            <!--**********FIM CABEÇALHO**********-->
+
+
+            <!--**********FORMULARIO PARA CONTATO**********-->
+
+            <form action="https://formsubmit.co/ravel.almeida2018@gmail.com" method="POST">
+                <fieldset>
+                    <legend>Entre em contato conosco</legend>
+                    <label for="name">Nome</label>
+                    <input type="text" name="name" id="name" required placeholder="Digite seu nome completo" />
+                    <label for="email">E-mail</label>
+                    <input type="email" name="email" id="email" required placeholder="Digite um e-mail válido" />
+                    <label for="phone">Telefone</label>
+                    <input type="tel" name="phone" id="phone" patter="[0-9]{3}-[0-9]{3}-[0-9]{4}" required placeholder="Digite seu telefone"/>
+                    <label for="message">Mensagem</label>
+                    <textarea name="message" id="message" rows="10" required
+                        placeholder="Deixe aqui sua mensagem"></textarea>
+                    <button type="submit" class="btn">Enviar</button>
+
+                    <input type="hidden" name="_subject" value="Requerimento de contato" />
+                    <input type="text" name="_honey" style="display:none"/>
+                    <input type="hidden" name="_captcha" value="false"/>
+                    <input type="hidden" name="_next" value="https://raveljalmeida.github.io/site_soesco/contato/obrigado.html" />
+                </fieldset>
+            </form>
+            
+            <!--**********FIM FORMULARIO**********-->
+
+
+            <!--**********INICIO RODAPÉ**********-->
+
+            <div class="rodape">
+                <div class="redes-soc">
+                    <div class="rede-logo">
+                        <div id="facebook-icon"></div>
+                    </div>
+                    <div class="rede-logo">
+                        <div id="linkedin-icon"></div>
+                    </div>
+                    <div class="rede-logo">
+                        <div id="instagram-icon"></div>
+                    </div>
+                </div>
+                <div class="location">
+                    <p>Avenida Padre Lourenço da Costa, 415 • Bairro São Vicente</p>
+                    <p>CEP 37502-003 • Itajubá/MG</p>
+                </div>
+                <div class="contact">
+                    <div class="phone">
+                        <img src="./img/phone-icon.png" alt="">
+                        <p>(35) 3622-4215</p>
+                    </div>
+                    <div class="email">
+                        <img src="./img/email-icon.png" alt="">
+                        <p>contato@soesco.com.br</p>
+                    </div>
+                </div>
+            </div>
+
+            <!--**********FIM RODAPÉ**********-->
+
+        </header>
+
+        <script src="./js/script.js"></script>
+    </body>
+</html>

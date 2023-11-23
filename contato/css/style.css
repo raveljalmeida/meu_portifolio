@@ -107,7 +107,7 @@ body {
     text-align: center;
 }
 
-#nossaEquipe {
+#contato {
     color: #216d56;
     font-weight: bold;
 }
@@ -115,68 +115,108 @@ body {
 /********************FIM-CABEÇALHO********************/
 
 
-/********************INICIO NOSSA EQUIPE******************/
+/********************INICIO FORMULARIO******************/
 
-.title {
-    color:#709970;
+form {
+    width: 80%;
+    max-width: 35em;
+    background-color: rgb(238, 238, 238);
+    padding: 1em;
+    margin: 35px auto;
     font-family: roboto;
-    font-size: 60px;
-    margin-left: 105px;
-    margin-top: 35px;
-    margin-bottom: 30px;
-}
-
-.employee-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.employee-box {
-    width: 100%;
-    max-width: 500px;
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background-color: rgb(238,238,238);
-    border: solid 4px #216d56;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-.employee-img {
-    width: 32%;
-    height: 32%;
-    border-radius: 50%;
-    overflow: hidden;
-    margin-bottom: 10px;
-    border: solid 4px #216d56;
-}
-
-.employee-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.employee-box h3 {
-    font-size: 30px;
-    font-family: roboto;
-    color: #709970;
     font-weight: bold;
+    border: solid 2px #216d56;
 }
 
-.employee-box p {
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+label,
+input,
+textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input,
+textarea {
+    background-color: white;
+    border: 2px solid transparent;
+    border-bottom-color: #bbb;
+    padding: 0.75em;
+    margin: 0.5em 0 2.5em;
+    color: black;
+    outline: 0;
+}
+
+input:invalid:focus,
+textarea:invalid:focus {
+    border-bottom: 2px solid #ff000d;
+}
+
+input:valid:focus,
+textarea:valid:focus {
+    border-bottom: 2px solid #0ec72a;
+}
+
+input:focus,
+textarea:focus {
+    border-bottom: 2px solid #8e999a;
+}
+
+legend {
+    padding: 0.5em 0;
+    text-align: center;
     font-family: roboto;
-    text-align: justify;
-    width: 90%;
-    margin: 15px auto;
+    font-weight: bold;
+    color: #216d56;
+    font-size: 1.8em;
 }
 
-/********************FIM NOSSA EQUIPE******************/
+.btn {
+    background-color: #216d56;
+    color: white;
+    cursor: pointer;
+    padding: 0.7em;
+    font-size: 1.2em;
+    font-family: roboto;
+    border: none;
+}
+
+.logo-obrigado {
+    margin: 80px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.logo-obrigado img {
+    width: 200px;
+    height: 90px;
+}
+
+.text-obrigado {
+   text-align: center;
+   font-family: roboto;
+   font-weight: bold;
+   color: #216d56;
+}
+
+.text-obrigado p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+   
+.text-obrigado a {
+    color: #216d56;
+    font-size: 25px;
+}  
+
+
+/********************FIM FORMULARIO******************/
 
 
 /***********INICIO RODAPÉ***********/
@@ -194,7 +234,6 @@ body {
 .rodape .redes-soc {
     height: 50px;
     width: 220px;
-    /*background-color: red;*/
     margin: 0 auto;
 }
 
@@ -299,15 +338,6 @@ body {
     .employee-center {
         margin-top: 20px;
     }
-
-    *:not(.slides){
-        max-width: 100%;
-      }
-    
-      .manual-btn {
-        background-color: rgb(238,238,238);
-        border: 2px solid rgb(238,238,238);
-      }
     
       .cabecalho img {
         margin-left: 20px;
