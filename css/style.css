@@ -145,7 +145,7 @@ body {
 .slide img {
     width: 100%;
     height: auto;
-    filter: blur(1px);
+    filter: blur(4px);
     transform: scale(1);
     transition: transform 5s;
 }
@@ -265,7 +265,7 @@ body {
 }
 
 .slide-text .diagonal-text {
-    width: 600px;
+    width: 680px;
     height: 180px;
     -webkit-transform: skew(-40deg); /* Chrome, Opera */
     -ms-transform: skew(-40deg); /* IE */
@@ -275,10 +275,11 @@ body {
 
 .slide-text .txt{
     transform: skew(40deg);
-    margin-left: 20px;
+    margin-left: 40px;
     text-align: left;
     position: relative;
     top: 96px;
+    font-size: 28px;
 }
 
 @keyframes slide-animation {
@@ -307,7 +308,7 @@ body {
 }
 
 .container .box {
-    height: 84%;
+    height: 80%;
     width: 24.5%;
     position: relative;
     top: 50%;
@@ -322,21 +323,14 @@ body {
     border: none;
 }
 
-.box h1 {
-    font-family: roboto;
-    font-size: 25px;
-    font-weight: bold;
-    text-align: center;
-    color: #216d56;
-}
-
 .box p {
     font-family: roboto;
     font-size: 16px;
-    font-weight: none;
-    text-align: justify;
-    width: 200px;
+    font-weight: bold;
+    text-align: center;
+    width: 70%;
     margin: 20px auto;
+    color: #216d56;
 }
 
 .services-title {
@@ -399,10 +393,12 @@ body {
 
 .service-inform h1{
     font-family: roboto;
-    font-size: 25px;
+    font-size: 24px;
     font-weight: bold;
     text-align: center;
     color: #216d56;
+    width: 60%;
+    margin: 0 auto;
 }
 
 .service-inform p{
@@ -410,7 +406,7 @@ body {
     font-size: 16px;
     font-weight: none;
     text-align: justify;
-    width: 200px;
+    width: 53%;
     margin: 20px auto;
 }
 
