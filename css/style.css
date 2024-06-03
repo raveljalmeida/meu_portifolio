@@ -637,6 +637,11 @@ body {
     max-width: 400px;
     margin: 20px auto;
     width: 100%;
+    height: auto;
+  }
+
+  .service-inform p {
+    width: 70%;
   }
 
 
